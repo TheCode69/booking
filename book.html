@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #4d6e4a;
+  }
+  
+  .form-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    margin: 50px auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333333;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+  }
+  
+  input[type="submit"] {
+    background-color: #ff6600;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #ff8800;
+  }
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    display: flex;
+    justify-content: left;
+    align-items: right;
+  }
+  
+  .logo img {
+    height: 40px;
+    margin-right: 10x
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li:last-child {
+    margin-right: 0;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    text-decoration: none;
+  }
+  
+  .search-engine {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-engine label {
+    color: #fff;
+    margin-right: 5px;
+  }
+  
+  .search-engine input {
+    padding: 5px;
+  }
+  
+  .search-engine button {
+    padding: 5px 10px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  @media screen and (max-width: 768px) {
+    header {
+      flex-direction: column;
+    }
+  
+    .logo img {
+      margin-bottom: 10px;
+    }
+  
+    nav {
+      margin-top: 10px;
+    }
+  
+    .search-engine {
+      margin-top: 10px;
+    }
+  }
+  
+</style>
+<!-- Add this script in the <head> section of your index.html file -->
+  <script>
+    // Function to get URL parameters
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, '\\$&');
+        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+
+    // Check if booking_success query parameter is present
+    var bookingSuccess = getParameterByName('booking_success');
+    if (bookingSuccess === '1') {
+        alert("Booking successful! Thank you for booking a room.");
+    }
+</script>
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <img src="image\logo3.png" alt="Code Agencies Logo">
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hostel.html">Hostels</a></li>
+            <li><a href="bd.html">Bedsitters</a></li>
+            <li><a href="single.html">Singles</a></li>
+            <li><a href="1b.html">One Bedroom</a></li>
+            <li><a href="2b.html">Two Bedroom</a></li>
+            <li><a href="2b.html">About</a></li>
+          </ul>
+          <div class="search-engine">
+            <input type="text" placeholder="Search...">
+            <button type="submit">Search</button>
+          </div>
+        </nav>
+      </header>
+
+<div class="form-container">
+  <form name ="book" method="post" action="book.php">
+    <label for="first_name">First Name</label>
+    <input type="text" id="first_name" name="first_name" required>
+    
+    <label for="last_name">Last Name</label>
+    <input type="text" id="last_name" name="last_name" required>
+    
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" required>
+    
+    <label for="age">Age</label>
+    <input type="number" id="age" name="age" required>
+    
+    <input type="submit" value="Book with Us">
+  </form>
+</div>
+
+</body>
+</html>
