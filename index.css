@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: rgb(245, 247, 147);
+    background-color: rgb(113, 250, 95);
   }
   
   header {
@@ -85,48 +85,79 @@ body {
     }
   }
   
-  
   main {
-    padding: 5px;
+    padding:0px;
+    
   }
-  
   main h1 {
     margin-bottom: 10px;
   }
   
+  #home {
+    background-image: url("path/to/your/background-image.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100px; /* Adjust the height as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #1a1212;
+    text-align: center;
+  }
   
-  .house-types {
+  #home h1 {
+    font-size: 36px;
+  }
+  
+  #home p {
+    font-size: 20px;
+  }
+  
+  /* Style the services section */
+  #services {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
   
-  .house-types a {
+  .product {
+    width: 250px;
+    border: 1px solid #ccc;
+    padding: 20px;
     margin: 10px;
     text-align: center;
-    text-decoration: none;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-  }
-  .house-types a:hover {
-    transform: scale(1.05);
   }
   
-  .house-types img {
+  .product img {
     width: 100%;
-    max-height: 200px;
+    height: 200px;
     object-fit: cover;
-    border-radius: 20px;
-    padding :5px;
+    margin-bottom: 10px;
   }
   
-  .house-types p {
-    margin: 5px 0;
-    text-align: center;
+  .product h2 {
+    font-size: 20px;
   }
-  /* styles.css */
+  
+  .product p {
+    font-size: 16px;
+  }
+  
+  .view-btn {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-top: 10px;
+  }
+  
+  .view-btn:hover {
+    background-color: #555;
+  }
+  
+
 
 /* Footer styles */
 footer {
